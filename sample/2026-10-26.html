@@ -1,0 +1,81 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>AI 아침 소식 2026-10-26</title>
+<style>
+body{font-family:'Malgun Gothic',sans-serif;max-width:860px;margin:32px auto;padding:0 16px;color:#222;line-height:1.6;background:#fafbfc}
+h1{color:#3182F6;margin-bottom:4px} .meta{color:#6B7684;font-size:13px;margin-bottom:24px}
+h2{color:#1B2A4A;border-bottom:2px solid #3182F6;padding-bottom:4px;margin-top:32px}
+.item{background:#fff;border:1px solid #e5e8eb;border-radius:8px;padding:12px 16px;margin:12px 0}
+.item h3{margin:0 0 6px;font-size:17px} .why{color:#3182F6;font-size:14px}
+a{color:#1B64DA;text-decoration:none} a:hover{text-decoration:underline}
+li{margin:4px 0} .warn{background:#fff4e5;padding:8px 12px;border-radius:6px} pre{white-space:pre-wrap;font-size:13px}
+</style></head><body><h1>AI 아침 소식</h1><div class="meta">2026-10-26 · 수집: GeekNews 12 · Simon Willison 3 · Hacker News (150점 이상) 9 · OpenAI 2 · Hugging Face 블로그 1 · r/LocalLLaMA 12</div><h2>오늘의 핵심</h2>
+<div class="item">
+<h3><a href="https://minimaxir.com/2026/10/cheap-llms/">OpenAI와 Anthropic, 몇 달 만에 LLM 가격을 최대 80% 인하한 이유</a></h3>
+<p>두 회사가 단기간에 LLM 호출 가격을 최대 80%까지 내렸다. 이 글은 그 배경과 가격 경쟁의 동인을 분석한다.</p>
+<p class="why">API 비용이 자동화 파이프라인의 손익분기선을 좌우하므로, FDE 직무에서 설계 단가 전제가 바뀐다.</p>
+</div>
+<div class="item">
+<h3><a href="https://simonwillison.net/2026/Oct/23/kimi-k31-pro/">Kimi K3.1 Pro 공개</a></h3>
+<p>새 LLM Kimi K3.1 Pro가 발표됐다. Simon Willison이 이를 소개한다.</p>
+<p class="why">상용 모델 선택지가 늘면 비용·성능 트레이드오프를 다시 저울질할 수 있다.</p>
+</div>
+<div class="item">
+<h3><a href="https://news.hada.io/topic?id=36002">그래프·LLM 북키핑 없이 AI 메모리 구현 — 입력 토큰 95% 절감</a></h3>
+<p>복잡한 그래프나 LLM 기반 북키핑 없이 AI 메모리를 구현하는 방법을 소개한다. 입력 토큰을 95%까지 줄였다고 한다.</p>
+<p class="why">장기 대화·에이전트 비용의 대부분이 입력 토큰이라, 실무 자동화 단가를 직접 낮출 수 있는 기법이다.</p>
+</div>
+<div class="item">
+<h3><a href="https://news.hada.io/topic?id=36004">Codex는 어떻게 탄생했나</a></h3>
+<p>코드 생성 모델/도구 Codex의 탄생 과정을 다룬다.</p>
+<p class="why">코드 에이전트 제품의 설계 의사결정을 엿볼 수 있어, Claude Code 활용과 FDE 관점 모두에 참고가 된다.</p>
+</div>
+<div class="item">
+<h3><a href="https://news.hada.io/topic?id=36011">Pinterest, 사용자 활동에서 장기 목표를 추론하는 LLM 구축</a></h3>
+<p>Pinterest가 사용자 활동 데이터로부터 장기적 목표를 추론하는 LLM을 만들었다.</p>
+<p class="why">행동 로그 → 의도 추론은 업무자동화에서 자주 쓰는 패턴이라 실전 레퍼런스가 된다.</p>
+</div>
+
+<h2>Claude Code 업데이트</h2>
+<ul>
+<li>2.1.310: Monitor 도구 및 플러그인 모니터 추가 (Bedrock·Vertex·Foundry, 텔레메트리/비필수 트래픽 비활성 환경 포함).</li>
+<li>일부 게이트웨이·호환 서버가 <code>effort-2025-11-24</code> 베타 값이나 대화 중 시스템 메시지를 거부해 요청이 실패하던 문제 수정 — 해당 값 없이 자동 재시도.</li>
+<li>"Prompt is too long" 오류 후 compaction이 base64·SVG 같은 밀집 텍스트를 과하게 남겨 다음 요청이 또 실패하던 문제 수정.</li>
+</ul>
+
+<h2>오늘 직접 써 볼 만한 것</h2>
+<p><a href="https://news.hada.io/topic?id=36002">토큰 95% 절감 AI 메모리 글</a>을 읽고, 평소 쓰던 긴 대화 로그(또는 샘플 채팅 수십 줄)를 하나 골라 글에서 제안한 메모리 압축 방식을 작은 파이썬 스크립트로 적용해 본다. 적용 전·후의 입력 토큰 수를 토크나이저로 세어 실제 절감률이 얼마나 나오는지 숫자로 확인하면 15분 안에 검증 가능하다.</p>
+
+<h2>나머지 소식</h2>
+<h4>GeekNews</h4>
+<ul>
+<li><a href="https://news.hada.io/topic?id=36010">AI 메모리 도구를 실제로 써 본 경험을 묻는 Ask GN 토론</a></li>
+<li><a href="https://news.hada.io/topic?id=36009">OpenAI·Anthropic의 LLM 가격 최대 80% 인하, 왜인가 (GeekNews 버전)</a></li>
+<li><a href="https://news.hada.io/topic?id=36005">AI 가격 책정·패키징에 벌어지는 일에 대한 분석</a></li>
+</ul>
+<h4>Hacker News</h4>
+<ul>
+<li><a href="https://lynchlab.net/llm-skin-cancer">10년 된 CNN이 피부암 진단에서 최신 프런티어 LLM을 능가</a></li>
+</ul>
+<h4>OpenAI</h4>
+<ul>
+<li><a href="https://openai.com/index/scaling-storage-one-billion-users-part-two">ChatGPT 10억 사용자를 위한 온라인 스토리지 급속 확장 (2부)</a></li>
+<li><a href="https://openai.com/index/securing-our-frontier-model-training-environment">프런티어 모델 학습 환경 보안 강화</a></li>
+</ul>
+<h4>Hugging Face 블로그</h4>
+<ul>
+<li><a href="https://huggingface.co/blog/allenai/litpivot">LitPivot: 문헌 지형 내 동적 맥락화로 연구 아이디어 발전시키기</a></li>
+</ul>
+<h4>r/LocalLLaMA</h4>
+<ul>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xfizft/psa_llamacpp_cve2026116096/">llama.cpp 보안 취약점 CVE-2026-116096 주의 공지</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xfhhm4/smh_seriously_nvidia_eyes_software_revenue_with_a/">NVIDIA, GPU당 연 $2,000 소프트웨어 매출 추진 논란</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xff9e4/crowdgpt_a_collaboratively_trained_llm/">CrowdGPT — 공동으로 학습하는 LLM</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xfeho8/nanbeige4333b_quantised_gguf/">Nanbeige4.3-33B 양자화 GGUF 공개</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xfb9oz/show_and_tell_polystrata_on_my_20_xeon_server/">$20 Xeon 서버에서 PolyStrata 구동기</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf9kmd/rtx_3080_20gb_got_rebar_and_p2p_unlock_70_prompt/">RTX 3080 20GB reBAR·P2P 언락으로 프롬프트 처리 +70%</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf8iqi/i_made_an_arena_for_fighting_jevs/">JEV 대결용 아레나 제작기</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf7loz/is_it_time_to_jump_ship_from_opencode/">OpenCode에서 갈아탈 때인가 (코드 에이전트 논의)</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf7b46/4x_v620_in_a_llm_generated_and_3d_printed_chassis/">LLM이 설계하고 3D 프린트한 섀시에 v620 4장 구성</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf716t/qwen_merge_tensors_on_convert_by_am17an_pull/">llama.cpp에 Qwen 변환 시 텐서 병합 PR</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf4sxg/the_minimum_size_of_an_llm_to_generate_a_little/">의미 있는 대화를 만드는 LLM의 최소 크기는</a></li>
+<li><a href="https://www.reddit.com/r/LocalLLaMA/comments/1xf14j2/luretts_and_lureturbo_600m_voice_models_to_run_4x/">Lure-TTS·Lure-Turbo — $200 미만으로 학습한 600M 실시간 음성 모델</a></li>
+</ul></body></html>
